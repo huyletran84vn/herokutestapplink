@@ -9,5 +9,9 @@ express()
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
   .get('/cool', (req, res) => res.send(cool()))
-  .get('/.well-known/assetlinks.json', (req, res) => res.send(cool()))
+  .get('/assetlinks', function(req,res,next) {
+         console.log('/assetlinks');
+		   // some code
+		   res.redirect('/.well-known/assetlinks.json');
+		})
   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
