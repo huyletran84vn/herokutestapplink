@@ -9,4 +9,11 @@ express()
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
   .get('/cool', (req, res) => res.send(cool()))
+  .get('/bill', (req, res) => path.join(__dirname, 'views'))
+  .get('/data', (req, res) => path.join(__dirname, 'views'))
+  .get('/assetlinks', function(req,res,next) {
+         console.log('/assetlinks');
+		   // some code
+		   res.redirect('/.well-known/assetlinks.json');
+		})
   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
