@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>アプリ起動サンプル</title>
+    <title>TestApplink</title>
 </head>
 <body>
 
@@ -17,9 +17,9 @@
         function launchApp() {
             var IOS_SCHEME = 'iOSのURLスキームをここに入れるべし！';
             var IOS_STORE = 'iOSのストアURLをここに入れるべし！';
-            var ANDROID_SCHEME = 'AndroidのURLスキームをここに入れるべし！';
+            var ANDROID_SCHEME = location;
             var ANDROID_PACKAGE = 'com.facebook.katana';
-            var PC_SITE = '公式サイトのURLとかここに入れるべし！'
+            var PC_SITE = 'https://play.google.com/store/apps/details?id=com.truecaller&hl=en'
 
             var userAgent = navigator.userAgent.toLowerCase();
             // iPhone端末ならアプリを開くかApp Storeを開く。
